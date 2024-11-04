@@ -3,7 +3,7 @@ extends Node2D
 @export var power := 2000.
 var _current_ball : RigidBody2D = null
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 
 	if Input.is_action_just_pressed("launch"):
 		if _current_ball == null:

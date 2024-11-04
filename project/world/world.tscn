@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=13 format=3 uid="uid://c8yur30t2p2yo"]
 
+[ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i55ga"]
@@ -21,7 +22,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s23c6"]
 size = Vector2(1.0245, 1.05404)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21ahr"]
+
 [node name="World" type="Node2D"]
+script = ExtResource("1_gtqkf")
 
 [node name="Walls" type="Node" parent="."]
 
@@ -132,3 +136,12 @@ shape = SubResource("RectangleShape2D_s23c6")
 
 [node name="Launcher" parent="." instance=ExtResource("1_ijd6e")]
 position = Vector2(610, 808)
+
+[node name="BallKillZone" type="Area2D" parent="."]
+position = Vector2(271, 1013)
+scale = Vector2(9.56944, 2.12125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BallKillZone"]
+shape = SubResource("RectangleShape2D_21ahr")
+
+[connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
