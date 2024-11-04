@@ -1,3 +1,129 @@
-[gd_scene format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=10 format=3 uid="uid://c8yur30t2p2yo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i55ga"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7cbsa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0yh6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yfriq"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e6m4d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dx0yi"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2gfpg"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_noy1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s23c6"]
+size = Vector2(1.0245, 1.05404)
 
 [node name="World" type="Node2D"]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="OuterLeftWall" type="StaticBody2D" parent="Walls"]
+position = Vector2(0, 576)
+scale = Vector2(1, 60.571)
+physics_material_override = SubResource("PhysicsMaterial_i55ga")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/OuterLeftWall"]
+position = Vector2(0, -1.56841)
+scale = Vector2(-21.7287, 17.289)
+texture = SubResource("PlaceholderTexture2D_7cbsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/OuterLeftWall"]
+shape = SubResource("RectangleShape2D_j0yh6")
+
+[node name="OuterRight Wall" type="StaticBody2D" parent="Walls"]
+position = Vector2(648, 576)
+scale = Vector2(1, 60.571)
+physics_material_override = SubResource("PhysicsMaterial_i55ga")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/OuterRight Wall"]
+position = Vector2(0, -1.56841)
+scale = Vector2(-21.7287, 17.289)
+texture = SubResource("PlaceholderTexture2D_7cbsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/OuterRight Wall"]
+shape = SubResource("RectangleShape2D_j0yh6")
+
+[node name="InnerRight Wall" type="StaticBody2D" parent="Walls"]
+position = Vector2(576, 635)
+scale = Vector2(0.6, 48.4122)
+physics_material_override = SubResource("PhysicsMaterial_i55ga")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/InnerRight Wall"]
+position = Vector2(0, -1.56841)
+scale = Vector2(-21.7287, 17.289)
+texture = SubResource("PlaceholderTexture2D_7cbsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/InnerRight Wall"]
+scale = Vector2(1, 1.02892)
+shape = SubResource("RectangleShape2D_j0yh6")
+
+[node name="OuterCeiling" type="StaticBody2D" parent="Walls"]
+position = Vector2(324, 0)
+scale = Vector2(34.32, 1)
+physics_material_override = SubResource("PhysicsMaterial_yfriq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/OuterCeiling"]
+scale = Vector2(20.1364, 19.76)
+texture = SubResource("PlaceholderTexture2D_e6m4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/OuterCeiling"]
+shape = SubResource("RectangleShape2D_dx0yi")
+
+[node name="CornerPeices" type="Node" parent="."]
+
+[node name="LauncherCorner" type="StaticBody2D" parent="CornerPeices"]
+position = Vector2(629, 22)
+rotation = 0.959931
+scale = Vector2(97.3182, -40.9219)
+physics_material_override = SubResource("PhysicsMaterial_2gfpg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/LauncherCorner"]
+texture = SubResource("PlaceholderTexture2D_noy1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/LauncherCorner"]
+position = Vector2(-0.0036335, 0.00864124)
+shape = SubResource("RectangleShape2D_s23c6")
+
+[node name="LauncherPlatform" type="StaticBody2D" parent="CornerPeices"]
+position = Vector2(623, 926)
+scale = Vector2(97.3182, -138.962)
+physics_material_override = SubResource("PhysicsMaterial_2gfpg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/LauncherPlatform"]
+texture = SubResource("PlaceholderTexture2D_noy1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/LauncherPlatform"]
+position = Vector2(-0.0036335, 0.00864124)
+shape = SubResource("RectangleShape2D_s23c6")
+
+[node name="BottomLeftCorner" type="StaticBody2D" parent="CornerPeices"]
+position = Vector2(42, 947)
+rotation = 0.436332
+scale = Vector2(270.925, -81.7475)
+physics_material_override = SubResource("PhysicsMaterial_2gfpg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/BottomLeftCorner"]
+texture = SubResource("PlaceholderTexture2D_noy1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomLeftCorner"]
+position = Vector2(-0.0036335, 0.00864124)
+shape = SubResource("RectangleShape2D_s23c6")
+
+[node name="BottomRightCorner" type="StaticBody2D" parent="CornerPeices"]
+position = Vector2(485, 947)
+rotation = 5.84685
+scale = Vector2(241.371, -81.7475)
+physics_material_override = SubResource("PhysicsMaterial_2gfpg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/BottomRightCorner"]
+texture = SubResource("PlaceholderTexture2D_noy1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomRightCorner"]
+position = Vector2(-0.0036335, 0.00864124)
+shape = SubResource("RectangleShape2D_s23c6")
