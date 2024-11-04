@@ -131,4 +131,4 @@ position = Vector2(-0.0036335, 0.00864124)
 shape = SubResource("RectangleShape2D_s23c6")
 
 [node name="Launcher" parent="." instance=ExtResource("1_ijd6e")]
-position = Vector2(529, 741)
+position = Vector2(610, 808)
