@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://sqjfptvf1vkw"]
+
+[ext_resource type="Script" path="res://flipper_right.gd" id="1_n1onk"]
+[ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flipper.png" id="2_gfs6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5bfw"]
+size = Vector2(254.513, 40.8878)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b8i7d"]
+radius = 27.0
+
+[node name="flipper_right" type="Node2D"]
+position = Vector2(806, 335)
+script = ExtResource("1_n1onk")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-118, 1)
+texture = ExtResource("2_gfs6y")
+
+[node name="collision1" type="CollisionShape2D" parent="."]
+position = Vector2(-120, -7)
+rotation = -0.125521
+shape = SubResource("RectangleShape2D_x5bfw")
+
+[node name="collision2" type="CollisionShape2D" parent="."]
+position = Vector2(-255, 18)
+shape = SubResource("CircleShape2D_b8i7d")
