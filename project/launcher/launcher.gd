@@ -2,7 +2,7 @@ extends Node2D
 
 signal game_over
 
-@export var power := 2000.
+@export var power := 1500.
 var _current_ball : RigidBody2D = null
 var _balls_left := 1
 
