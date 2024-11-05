@@ -155,12 +155,10 @@ offset_bottom = 67.0
 text = "RESTART"
 
 [node name="flipper_right" parent="." instance=ExtResource("3_70sgq")]
-position = Vector2(447, 808)
+position = Vector2(451, 820)
 
 [node name="flipper_left" parent="." instance=ExtResource("2_ojv08")]
-position = Vector2(106, 823)
-rotation = 3.14159
-scale = Vector2(0.5, 0.5)
+position = Vector2(125, 820)
 
 [connection signal="game_over" from="Launcher" to="." method="_on_launcher_game_over"]
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]

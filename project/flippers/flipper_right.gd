@@ -13,5 +13,4 @@ func _process(_delta: float) -> void:
 		_target_rotation = _starting_rotation - _rotation_amount
 	else:
 		_target_rotation = _starting_rotation
-
 	rotation = lerp_angle(rotation, _target_rotation, 0.3)
