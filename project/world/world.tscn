@@ -86,17 +86,19 @@ shape = SubResource("RectangleShape2D_dx0yi")
 [node name="CornerPeices" type="Node" parent="."]
 
 [node name="LauncherCorner" type="StaticBody2D" parent="CornerPeices"]
-position = Vector2(629, 22)
+position = Vector2(629, 1.99997)
 rotation = 0.959931
 scale = Vector2(97.3182, -40.9219)
 physics_material_override = SubResource("PhysicsMaterial_2gfpg")
 
 [node name="Sprite2D" type="Sprite2D" parent="CornerPeices/LauncherCorner"]
 texture = SubResource("PlaceholderTexture2D_noy1r")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/LauncherCorner"]
 position = Vector2(-0.0036335, 0.00864124)
 shape = SubResource("RectangleShape2D_s23c6")
+metadata/_edit_lock_ = true
 
 [node name="LauncherPlatform" type="StaticBody2D" parent="CornerPeices"]
 position = Vector2(623, 926)
