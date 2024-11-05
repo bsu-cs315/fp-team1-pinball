@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://csrp23ke64f4b"]
+[gd_scene load_steps=6 format=3 uid="uid://csrp23ke64f4b"]
 
 [ext_resource type="Script" path="res://flippers/flipper_left.gd" id="1_2sh5h"]
 [ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flippers/flipper.png" id="2_3m607"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7jbh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5bfw"]
 size = Vector2(254.513, 44.1045)
@@ -9,8 +11,9 @@ size = Vector2(254.513, 44.1045)
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8i7d"]
 radius = 27.0
 
-[node name="flipper_left" type="Node2D"]
+[node name="flipper_left" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
+physics_material_override = SubResource("PhysicsMaterial_7jbh8")
 script = ExtResource("1_2sh5h")
 metadata/_edit_group_ = true
 
