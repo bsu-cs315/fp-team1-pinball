@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=14 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
+[ext_resource type="PackedScene" uid="uid://beylwdakigcmm" path="res://GameOver/game_over.tscn" id="3_al030"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i55ga"]
 
@@ -143,5 +144,7 @@ scale = Vector2(9.56944, 2.12125)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BallKillZone"]
 shape = SubResource("RectangleShape2D_21ahr")
+
+[node name="GameOver" parent="." instance=ExtResource("3_al030")]
 
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]

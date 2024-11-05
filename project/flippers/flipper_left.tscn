@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://csrp23ke64f4b"]
+[gd_scene load_steps=4 format=3 uid="uid://csrp23ke64f4b"]
 
-[ext_resource type="Script" path="res://flipper_left.gd" id="1_la78j"]
-[ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flipper.png" id="2_3m607"]
+[ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flippers/flipper.png" id="2_3m607"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5bfw"]
 size = Vector2(254.513, 44.1045)
@@ -11,7 +10,6 @@ radius = 27.0
 
 [node name="flipper_left" type="Node2D"]
 position = Vector2(496, 278)
-script = ExtResource("1_la78j")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
