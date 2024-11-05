@@ -8,7 +8,7 @@ func _ready() -> void:
 	rotation = starting_rotation
 	target_rotation = starting_rotation
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("right_flipper"):
 		target_rotation = starting_rotation - rotation_amount
 	else:
