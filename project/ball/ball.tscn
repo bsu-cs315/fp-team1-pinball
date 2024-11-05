@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://nf4nun7dhya"]
+[gd_scene load_steps=4 format=3 uid="uid://nf4nun7dhya"]
 
 [ext_resource type="Texture2D" uid="uid://dj7nph0oqn444" path="res://ball/ball.png" id="1_7iwom"]
-[ext_resource type="Script" path="res://ball/ball.gd" id="1_mvo1l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sc1t8"]
 friction = 0.6
@@ -16,7 +15,6 @@ physics_material_override = SubResource("PhysicsMaterial_sc1t8")
 contact_monitor = true
 max_contacts_reported = 5
 linear_damp_mode = 1
-script = ExtResource("1_mvo1l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7iwom")
