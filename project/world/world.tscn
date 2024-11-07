@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=17 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
@@ -25,6 +25,13 @@
 size = Vector2(1.0245, 1.05404)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21ahr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6u8m"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_slqxy"]
+font_size = 64
+font_color = Color(0.757988, 0.219967, 0.785634, 1)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_gtqkf")
@@ -148,19 +155,27 @@ scale = Vector2(9.56944, 2.12125)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BallKillZone"]
 shape = SubResource("RectangleShape2D_21ahr")
 
-[node name="RestartButton" type="Button" parent="."]
-visible = false
-offset_left = 53.0
-offset_top = 36.0
-offset_right = 128.0
-offset_bottom = 67.0
-text = "RESTART"
-
 [node name="flipper_right" parent="." instance=ExtResource("3_70sgq")]
 position = Vector2(451, 820)
 
 [node name="flipper_left" parent="." instance=ExtResource("2_ojv08")]
 position = Vector2(125, 820)
 
+[node name="BallsLeftLabel" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 17.0
+offset_right = 151.0
+offset_bottom = 51.0
+text = "Balls Left : "
+label_settings = SubResource("LabelSettings_l6u8m")
+
+[node name="GameOverLabel" type="Label" parent="."]
+visible = false
+offset_left = 133.0
+offset_top = 440.0
+offset_right = 500.0
+offset_bottom = 528.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_slqxy")
+
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
-[connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]

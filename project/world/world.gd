@@ -1,12 +1,15 @@
 extends Node2D
 
-func _on_ball_kill_zone_body_entered(_body: Node2D) -> void:
-	_body.queue_free()
+
+func _process(_delta: float) -> void:
+	if $Launcher.balls_left == 0 and $Launcher.ball_in_play == false:
+		$GameOverLabel.show()
+		await(get_tree().create_timer(5).timeout)
+		get_tree().change_scene_to_file("res://Title screen/title_screen.tscn")
+		
+	$BallsLeftLabel.text = "Balls Left : %.d" % $Launcher.balls_left
 
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://world/world.tscn")
-
-
-func _on_launcher_game_over() -> void:
-	$RestartButton.show()
+	
+func _on_ball_kill_zone_body_entered(body: Node2D) -> void:
+	body.queue_free()
