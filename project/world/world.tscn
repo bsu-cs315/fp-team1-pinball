@@ -162,6 +162,5 @@ position = Vector2(451, 820)
 [node name="flipper_left" parent="." instance=ExtResource("2_ojv08")]
 position = Vector2(125, 820)
 
-[connection signal="game_over" from="Launcher" to="." method="_on_launcher_game_over"]
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]
