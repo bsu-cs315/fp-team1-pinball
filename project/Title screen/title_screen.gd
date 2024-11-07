@@ -10,8 +10,3 @@ func _on_credits_button_pressed() -> void:
 
 func _on_directions_button_pressed() -> void:
 	$Directions/DirectionsLabel.visible = not $Directions/DirectionsLabel.visible
-
-func _show_only_label(label_path: String) -> void:
-	$Credits/CreditsLabel.visible = false
-	$Directions/DirectionsLabel.visible = false
-	$(label_path).visible = true
