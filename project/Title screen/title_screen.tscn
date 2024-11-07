@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://qt5fgtmfnj8x"]
+[gd_scene load_steps=3 format=3 uid="uid://qt5fgtmfnj8x"]
 
 [ext_resource type="Script" path="res://Title screen/title_screen.gd" id="1_sx2mq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_83tai"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_sx2mq")
@@ -35,6 +37,15 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Credits"
 
+[node name="CreditsLabel" type="Label" parent="Credits"]
+visible = false
+layout_mode = 0
+offset_left = -80.0
+offset_top = 194.0
+offset_right = -40.0
+offset_bottom = 217.0
+text = "Insert Credits here / Placeholder"
+
 [node name="Directions" type="Button" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
@@ -48,6 +59,18 @@ offset_bottom = -370.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Directions"
+
+[node name="DirectionsLabel" type="Label" parent="Directions"]
+visible = false
+layout_mode = 0
+offset_left = -229.0
+offset_top = 80.0
+offset_right = 334.0
+offset_bottom = 164.0
+text = "Press Spacebar to launch the pinball,
+ then keep the ball in play by hitting it up with the Flippers using Q and E.
+ Rack up as many points as you can to collect the High Score!"
+label_settings = SubResource("LabelSettings_83tai")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_button_pressed"]
