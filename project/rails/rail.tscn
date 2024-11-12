@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxb0r42els2w7"]
+
+[ext_resource type="Texture2D" uid="uid://bl4go53d6ght1" path="res://rails/cue.png" id="1_p2wm7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55hdj"]
+size = Vector2(60, 3520)
+
+[node name="Rail" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.19209e-07, 1)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_55hdj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.19209e-07, -2.23517e-08)
+rotation = 1.64061
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_p2wm7")
+metadata/_edit_lock_ = true

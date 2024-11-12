@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=18 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
 [ext_resource type="PackedScene" uid="uid://uy7ohkn30ccv" path="res://flippers/flippers.tscn" id="3_po2wi"]
 [ext_resource type="PackedScene" uid="uid://bxpkvq2nwabpb" path="res://bumper/bumper.tscn" id="4_ti8qm"]
+[ext_resource type="PackedScene" uid="uid://bxb0r42els2w7" path="res://rails/rail.tscn" id="5_a282h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i55ga"]
 
@@ -156,7 +157,7 @@ scale = Vector2(9.56944, 2.12125)
 shape = SubResource("RectangleShape2D_21ahr")
 
 [node name="Flippers" parent="." instance=ExtResource("3_po2wi")]
-position = Vector2(-89, 342)
+position = Vector2(-56, 341)
 
 [node name="BallsLeftLabel" type="Label" parent="."]
 offset_left = 26.0
@@ -176,6 +177,16 @@ text = "GAME OVER"
 label_settings = SubResource("LabelSettings_slqxy")
 
 [node name="Bumper" parent="." instance=ExtResource("4_ti8qm")]
-position = Vector2(314, 281)
+position = Vector2(295, 535)
+
+[node name="Rail" parent="." instance=ExtResource("5_a282h")]
+position = Vector2(510, 704)
+rotation = 0.174533
+scale = Vector2(0.6, 0.6)
+
+[node name="Rail2" parent="." instance=ExtResource("5_a282h")]
+position = Vector2(97, 697)
+rotation = -0.174533
+scale = Vector2(0.6, 0.6)
 
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
