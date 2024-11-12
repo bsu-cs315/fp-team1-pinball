@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://qt5fgtmfnj8x"]
+[gd_scene load_steps=5 format=3 uid="uid://qt5fgtmfnj8x"]
 
 [ext_resource type="Script" path="res://Title screen/title_screen.gd" id="1_sx2mq"]
+[ext_resource type="Texture2D" uid="uid://btko2penm71l4" path="res://Title screen/PoolTable.jpg" id="2_pw21b"]
+[ext_resource type="Texture2D" uid="uid://cw8hwhnsbvdur" path="res://Title screen/PinballLogo2.webp" id="3_ckrx8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_83tai"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_sx2mq")
+
+[node name="PoolTable" type="TextureRect" parent="."]
+offset_left = 679.0
+offset_top = -25.0
+offset_right = 1680.0
+offset_bottom = 686.0
+rotation = 1.5708
+texture = ExtResource("2_pw21b")
 
 [node name="Play" type="Button" parent="."]
 anchors_preset = 8
@@ -71,6 +81,14 @@ text = "Press Spacebar to launch the pinball,
  then keep the ball in play by hitting it up with the Flippers using Q and E.
  Rack up as many points as you can to collect the High Score!"
 label_settings = SubResource("LabelSettings_83tai")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 179.0
+offset_top = 157.0
+offset_right = 462.0
+offset_bottom = 410.0
+texture = ExtResource("3_ckrx8")
+expand_mode = 2
 
 [connection signal="pressed" from="Play" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_button_pressed"]
