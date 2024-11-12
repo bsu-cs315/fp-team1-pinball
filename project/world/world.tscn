@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=21 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
@@ -26,10 +26,14 @@ size = Vector2(19330.9, 5021.34)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2gfpg"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_noy1r"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnkig"]
+size = Vector2(985.567, 261.278)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s23c6"]
-size = Vector2(1.0245, 1.05404)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0sdh"]
+size = Vector2(921.109, 240.644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mpm7"]
+size = Vector2(981.799, 293.838)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21ahr"]
 
@@ -91,8 +95,8 @@ scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_ngn6p")
 
 [node name="OuterCeiling" type="Sprite2D" parent="Walls"]
-position = Vector2(324, -111.5)
-scale = Vector2(1, 0.554)
+position = Vector2(324, -118)
+scale = Vector2(1, 0.528)
 texture = ExtResource("2_x4lp5")
 
 [node name="OuterCeiling" type="StaticBody2D" parent="Walls/OuterCeiling"]
@@ -105,58 +109,50 @@ shape = SubResource("RectangleShape2D_tlvgo")
 
 [node name="CornerPeices" type="Node" parent="."]
 
-[node name="LauncherCorner" type="StaticBody2D" parent="CornerPeices"]
-position = Vector2(629, 1.99997)
+[node name="LauncherCorner" type="Sprite2D" parent="CornerPeices"]
+position = Vector2(835, -78)
 rotation = 0.959931
-scale = Vector2(97.3182, -40.9219)
+scale = Vector2(0.295653, 1)
+texture = ExtResource("2_x4lp5")
+
+[node name="LauncherCorner" type="StaticBody2D" parent="CornerPeices/LauncherCorner"]
 physics_material_override = SubResource("PhysicsMaterial_2gfpg")
 
-[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/LauncherCorner"]
-texture = SubResource("PlaceholderTexture2D_noy1r")
-metadata/_edit_lock_ = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/LauncherCorner/LauncherCorner"]
+position = Vector2(-10.2076, 120.639)
+shape = SubResource("RectangleShape2D_mnkig")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/LauncherCorner"]
-position = Vector2(-0.0036335, 0.00864124)
-shape = SubResource("RectangleShape2D_s23c6")
-metadata/_edit_lock_ = true
-
-[node name="LauncherPlatform" type="StaticBody2D" parent="CornerPeices"]
-position = Vector2(623, 926)
-scale = Vector2(97.3182, -138.962)
-physics_material_override = SubResource("PhysicsMaterial_2gfpg")
-
-[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/LauncherPlatform"]
-texture = SubResource("PlaceholderTexture2D_noy1r")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/LauncherPlatform"]
-position = Vector2(-0.0036335, 0.00864124)
-shape = SubResource("RectangleShape2D_s23c6")
-
-[node name="BottomLeftCorner" type="StaticBody2D" parent="CornerPeices"]
-position = Vector2(42, 947)
+[node name="BottomLeftCorner" type="Sprite2D" parent="CornerPeices"]
+position = Vector2(-6.00002, 1018)
 rotation = 0.436332
-scale = Vector2(270.925, -81.7475)
+scale = Vector2(0.301611, 0.544395)
+texture = ExtResource("2_x4lp5")
+
+[node name="BottomLeftCorner" type="StaticBody2D" parent="CornerPeices/BottomLeftCorner"]
 physics_material_override = SubResource("PhysicsMaterial_2gfpg")
 
-[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/BottomLeftCorner"]
-texture = SubResource("PlaceholderTexture2D_noy1r")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomLeftCorner/BottomLeftCorner"]
+position = Vector2(26.4407, -130.322)
+shape = SubResource("RectangleShape2D_w0sdh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomLeftCorner"]
-position = Vector2(-0.0036335, 0.00864124)
-shape = SubResource("RectangleShape2D_s23c6")
+[node name="BottomRightCorner" type="Sprite2D" parent="CornerPeices"]
+position = Vector2(530.78, 1034.72)
+rotation = -0.436335
+scale = Vector2(0.252289, 0.566095)
+texture = ExtResource("2_x4lp5")
 
-[node name="BottomRightCorner" type="StaticBody2D" parent="CornerPeices"]
-position = Vector2(485, 947)
-rotation = 5.84685
-scale = Vector2(241.371, -81.7475)
+[node name="BottomRightCorner" type="StaticBody2D" parent="CornerPeices/BottomRightCorner"]
 physics_material_override = SubResource("PhysicsMaterial_2gfpg")
 
-[node name="Sprite2D" type="Sprite2D" parent="CornerPeices/BottomRightCorner"]
-texture = SubResource("PlaceholderTexture2D_noy1r")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomRightCorner/BottomRightCorner"]
+position = Vector2(-2.62516, -105.249)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_4mpm7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomRightCorner"]
-position = Vector2(-0.0036335, 0.00864124)
-shape = SubResource("RectangleShape2D_s23c6")
+[node name="LauncherPlatform" type="Sprite2D" parent="CornerPeices"]
+position = Vector2(830, 1014.5)
+scale = Vector2(0.516062, 0.646)
+texture = ExtResource("2_x4lp5")
 
 [node name="Launcher" parent="." instance=ExtResource("1_ijd6e")]
 position = Vector2(610, 808)
