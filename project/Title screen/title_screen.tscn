@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Title screen/title_screen.gd" id="1_sx2mq"]
 [ext_resource type="Texture2D" uid="uid://btko2penm71l4" path="res://Title screen/PoolTable.jpg" id="2_pw21b"]
-[ext_resource type="Texture2D" uid="uid://cw8hwhnsbvdur" path="res://Title screen/PinballLogo2.webp" id="3_ckrx8"]
+[ext_resource type="Texture2D" uid="uid://dpbf7tyjogu3c" path="res://Title screen/PinballLogo3.1.PNG" id="3_h4kt7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_83tai"]
 
@@ -82,12 +82,12 @@ text = "Press Spacebar to launch the pinball,
  Rack up as many points as you can to collect the High Score!"
 label_settings = SubResource("LabelSettings_83tai")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 179.0
-offset_top = 157.0
-offset_right = 462.0
-offset_bottom = 410.0
-texture = ExtResource("3_ckrx8")
+[node name="PinballLogo" type="TextureRect" parent="."]
+offset_left = 131.0
+offset_top = 109.0
+offset_right = 512.0
+offset_bottom = 440.0
+texture = ExtResource("3_h4kt7")
 expand_mode = 2
 
 [connection signal="pressed" from="Play" to="." method="_on_play_button_pressed"]

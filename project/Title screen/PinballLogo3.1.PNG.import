@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw8hwhnsbvdur"
-path="res://.godot/imported/PinballLogo2.webp-0cff11b4506e47d07ecf9bfd746b88d7.ctex"
+uid="uid://dpbf7tyjogu3c"
+path="res://.godot/imported/PinballLogo3.1.PNG-a3a92c99bacf93d602fd6bcacd8ca85b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Title screen/PinballLogo2.webp"
-dest_files=["res://.godot/imported/PinballLogo2.webp-0cff11b4506e47d07ecf9bfd746b88d7.ctex"]
+source_file="res://Title screen/PinballLogo3.1.PNG"
+dest_files=["res://.godot/imported/PinballLogo3.1.PNG-a3a92c99bacf93d602fd6bcacd8ca85b.ctex"]
 
 [params]
 
