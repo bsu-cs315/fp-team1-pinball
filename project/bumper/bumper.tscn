@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxpkvq2nwabpb"]
+
+[ext_resource type="Texture2D" uid="uid://cj0cl7g3ie5d5" path="res://bumper/bumper_on.png" id="1_a31ke"]
+[ext_resource type="Script" path="res://bumper/bumper.gd" id="1_q4tvj"]
+[ext_resource type="Texture2D" uid="uid://d4kcwp4tpis70" path="res://bumper/bumper_off.png" id="2_dy2lc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqq5l"]
+radius = 51.0098
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_blcpj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a31ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy2lc")
+}],
+"loop": true,
+"name": &"bumper_flash",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dy2lc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bumper" type="Area2D"]
+disable_mode = 2
+script = ExtResource("1_q4tvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hqq5l")
+
+[node name="BumperSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_blcpj")
+frame_progress = 0.146413
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
