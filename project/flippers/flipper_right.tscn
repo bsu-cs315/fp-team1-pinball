@@ -18,29 +18,35 @@ size = Vector2(255, 46)
 [sub_resource type="CircleShape2D" id="CircleShape2D_fm7yp"]
 radius = 44.4072
 
-[node name="flipper_right" type="StaticBody2D" groups=["Flippers"]]
-scale = Vector2(0.5, 0.5)
+[node name="flipper_right" type="RigidBody2D" groups=["Flippers"]]
 physics_material_override = SubResource("PhysicsMaterial_td0fs")
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_2gl4r")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-118, 1)
+position = Vector2(-60, 0.5)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_gfs6y")
 
 [node name="collision1" type="CollisionShape2D" parent="."]
-position = Vector2(-122.894, -6.63486)
+position = Vector2(-63, -3.5)
 rotation = -0.125521
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_x5bfw")
 
 [node name="collision2" type="CollisionShape2D" parent="."]
-position = Vector2(-255, 18)
+position = Vector2(-129, 9.5)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_b8i7d")
 
 [node name="collision3" type="CollisionShape2D" parent="."]
-position = Vector2(-123.5, 23)
+position = Vector2(-64, 11.5)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_as2m6")
 
 [node name="collision4" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0)
+position = Vector2(0, 0.5)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_fm7yp")

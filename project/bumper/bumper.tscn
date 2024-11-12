@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxpkvq2nwabpb"]
+[gd_scene load_steps=7 format=3 uid="uid://bxpkvq2nwabpb"]
 
 [ext_resource type="Texture2D" uid="uid://cj0cl7g3ie5d5" path="res://bumper/bumper_on.png" id="1_a31ke"]
 [ext_resource type="Script" path="res://bumper/bumper.gd" id="1_q4tvj"]
 [ext_resource type="Texture2D" uid="uid://d4kcwp4tpis70" path="res://bumper/bumper_off.png" id="2_dy2lc"]
+[ext_resource type="AudioStream" uid="uid://h64d3ju5sgh6" path="res://bumper_hit.wav" id="4_g68yy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqq5l"]
 radius = 51.0
@@ -66,6 +67,9 @@ shape = SubResource("CircleShape2D_hqq5l")
 
 [node name="BumperSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_blcpj")
+
+[node name="BumperSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_g68yy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_looped" from="BumperSprite" to="." method="_on_bumper_sprite_animation_looped"]

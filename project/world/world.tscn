@@ -157,7 +157,7 @@ scale = Vector2(9.56944, 2.12125)
 shape = SubResource("RectangleShape2D_21ahr")
 
 [node name="Flippers" parent="." instance=ExtResource("3_po2wi")]
-position = Vector2(-56, 341)
+position = Vector2(291, 850)
 
 [node name="BallsLeftLabel" type="Label" parent="."]
 offset_left = 26.0
@@ -180,7 +180,7 @@ label_settings = SubResource("LabelSettings_slqxy")
 position = Vector2(295, 535)
 
 [node name="Rail" parent="." instance=ExtResource("5_a282h")]
-position = Vector2(510, 704)
+position = Vector2(480, 706)
 rotation = 0.174533
 
 [node name="Rail2" parent="." instance=ExtResource("5_a282h")]
