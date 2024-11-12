@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d4kcwp4tpis70" path="res://bumper/bumper_off.png" id="2_dy2lc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqq5l"]
-radius = 51.0098
+radius = 51.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_blcpj"]
 animations = [{
@@ -53,8 +53,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bumper" type="Area2D"]
-disable_mode = 2
+[node name="Bumper" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_q4tvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -64,6 +68,5 @@ shape = SubResource("CircleShape2D_hqq5l")
 sprite_frames = SubResource("SpriteFrames_blcpj")
 animation = &"bumper_flash"
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_looped" from="BumperSprite" to="." method="_on_bumper_sprite_animation_looped"]
