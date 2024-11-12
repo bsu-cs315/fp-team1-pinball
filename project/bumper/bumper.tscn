@@ -15,6 +15,30 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_dy2lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_a31ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy2lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_a31ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy2lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_a31ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy2lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_a31ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy2lc")
 }],
 "loop": true,
 "name": &"bumper_flash",
@@ -38,7 +62,8 @@ shape = SubResource("CircleShape2D_hqq5l")
 
 [node name="BumperSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_blcpj")
-frame_progress = 0.146413
+animation = &"bumper_flash"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_looped" from="BumperSprite" to="." method="_on_bumper_sprite_animation_looped"]

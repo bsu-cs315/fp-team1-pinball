@@ -176,6 +176,6 @@ text = "GAME OVER"
 label_settings = SubResource("LabelSettings_slqxy")
 
 [node name="Bumper" parent="." instance=ExtResource("4_ti8qm")]
-position = Vector2(457, 211)
+position = Vector2(314, 281)
 
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
