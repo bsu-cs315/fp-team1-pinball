@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flippers/flipper.png" id="2_3m607"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7jbh8"]
-bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5bfw"]
 size = Vector2(262.334, 46.8733)
