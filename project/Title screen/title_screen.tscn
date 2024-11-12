@@ -3,8 +3,7 @@
 [ext_resource type="Script" path="res://Title screen/title_screen.gd" id="1_sx2mq"]
 [ext_resource type="Texture2D" uid="uid://btko2penm71l4" path="res://Title screen/PoolTable.jpg" id="2_pw21b"]
 [ext_resource type="Texture2D" uid="uid://dpbf7tyjogu3c" path="res://Title screen/PinballLogo3.1.PNG" id="3_h4kt7"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_83tai"]
+[ext_resource type="Texture2D" uid="uid://b163h30l7xwk8" path="res://Title screen/WoodButton3.jpg" id="3_up11p"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_sx2mq")
@@ -23,15 +22,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -15.5
-offset_right = 50.0
-offset_bottom = 15.5
+offset_left = -142.0
+offset_top = 45.0
+offset_right = 158.0
+offset_bottom = 95.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Play"
+icon = ExtResource("3_up11p")
+flat = true
+clip_text = true
+icon_alignment = 1
 
 [node name="Credits" type="Button" parent="."]
 anchors_preset = 7
@@ -39,21 +42,25 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = -445.0
-offset_right = 50.0
-offset_bottom = -414.0
+offset_left = -142.0
+offset_top = -347.0
+offset_right = 158.0
+offset_bottom = -297.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Credits"
+icon = ExtResource("3_up11p")
+flat = true
+clip_text = true
+icon_alignment = 1
 
 [node name="CreditsLabel" type="Label" parent="Credits"]
 visible = false
 layout_mode = 0
-offset_left = -80.0
-offset_top = 194.0
-offset_right = -40.0
-offset_bottom = 217.0
+offset_left = 25.0
+offset_top = 179.0
+offset_right = 275.0
+offset_bottom = 202.0
 text = "Insert Credits here / Placeholder"
 
 [node name="Directions" type="Button" parent="."]
@@ -62,25 +69,28 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = -401.0
-offset_right = 50.0
-offset_bottom = -370.0
+offset_left = -140.0
+offset_top = -264.0
+offset_right = 160.0
+offset_bottom = -214.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Directions"
+icon = ExtResource("3_up11p")
+flat = true
+clip_text = true
+icon_alignment = 1
 
 [node name="DirectionsLabel" type="Label" parent="Directions"]
 visible = false
 layout_mode = 0
-offset_left = -229.0
-offset_top = 80.0
-offset_right = 334.0
-offset_bottom = 164.0
-text = "Press Spacebar to launch the pinball,
- then keep the ball in play by hitting it up with the Flippers using Q and E.
- Rack up as many points as you can to collect the High Score!"
-label_settings = SubResource("LabelSettings_83tai")
+offset_left = 6.0
+offset_top = 83.0
+offset_right = 292.0
+offset_bottom = 158.0
+text = "Press Spacebar to Launch the ball
+Press Q and E to activate the Flippers
+Keep the ball up to rack up points!"
 
 [node name="PinballLogo" type="TextureRect" parent="."]
 offset_left = 131.0
