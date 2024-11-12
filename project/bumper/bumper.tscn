@@ -66,7 +66,6 @@ shape = SubResource("CircleShape2D_hqq5l")
 
 [node name="BumperSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_blcpj")
-animation = &"bumper_flash"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_looped" from="BumperSprite" to="." method="_on_bumper_sprite_animation_looped"]

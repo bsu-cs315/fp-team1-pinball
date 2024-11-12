@@ -194,11 +194,9 @@ position = Vector2(295, 535)
 [node name="Rail" parent="." instance=ExtResource("5_a282h")]
 position = Vector2(510, 704)
 rotation = 0.174533
-scale = Vector2(0.6, 0.6)
 
 [node name="Rail2" parent="." instance=ExtResource("5_a282h")]
 position = Vector2(97, 697)
 rotation = -0.174533
-scale = Vector2(0.6, 0.6)
 
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
