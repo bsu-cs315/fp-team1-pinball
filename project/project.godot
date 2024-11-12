@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=648
 window/size/viewport_height=952
 
+[dotnet]
+
+project/assembly_name="CS315 Final Project - Pinball"
+
 [global_group]
 
 Flippers=""

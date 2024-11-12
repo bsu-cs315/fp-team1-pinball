@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://sqjfptvf1vkw"]
 
-[ext_resource type="Script" path="res://flippers/flipper_right.gd" id="1_p3mi5"]
+[ext_resource type="Script" path="res://flippers/flippers.gd" id="1_2gl4r"]
 [ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flippers/flipper.png" id="2_gfs6y"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_td0fs"]
@@ -15,7 +15,7 @@ radius = 27.0
 [node name="flipper_right" type="StaticBody2D" groups=["Flippers"]]
 scale = Vector2(0.5, 0.5)
 physics_material_override = SubResource("PhysicsMaterial_td0fs")
-script = ExtResource("1_p3mi5")
+script = ExtResource("1_2gl4r")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
