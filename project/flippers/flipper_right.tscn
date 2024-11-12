@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://sqjfptvf1vkw"]
+[gd_scene load_steps=8 format=3 uid="uid://sqjfptvf1vkw"]
 
 [ext_resource type="Script" path="res://flippers/flippers.gd" id="1_2gl4r"]
 [ext_resource type="Texture2D" uid="uid://ge0re0nh3n63" path="res://flippers/flipper.png" id="2_gfs6y"]
@@ -7,10 +7,16 @@
 bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5bfw"]
-size = Vector2(254.513, 40.8878)
+size = Vector2(260.346, 40.8878)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8i7d"]
 radius = 27.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as2m6"]
+size = Vector2(255, 46)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fm7yp"]
+radius = 44.4072
 
 [node name="flipper_right" type="StaticBody2D" groups=["Flippers"]]
 scale = Vector2(0.5, 0.5)
@@ -23,10 +29,18 @@ position = Vector2(-118, 1)
 texture = ExtResource("2_gfs6y")
 
 [node name="collision1" type="CollisionShape2D" parent="."]
-position = Vector2(-120, -7)
+position = Vector2(-122.894, -6.63486)
 rotation = -0.125521
 shape = SubResource("RectangleShape2D_x5bfw")
 
 [node name="collision2" type="CollisionShape2D" parent="."]
 position = Vector2(-255, 18)
 shape = SubResource("CircleShape2D_b8i7d")
+
+[node name="collision3" type="CollisionShape2D" parent="."]
+position = Vector2(-123.5, 23)
+shape = SubResource("RectangleShape2D_as2m6")
+
+[node name="collision4" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_fm7yp")
