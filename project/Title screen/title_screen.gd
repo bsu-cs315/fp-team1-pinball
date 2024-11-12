@@ -6,7 +6,9 @@ func _on_play_button_pressed() -> void:
 
 func _on_credits_button_pressed() -> void:
 	$Credits/CreditsLabel.visible = not $Credits/CreditsLabel.visible
+	$Directions/DirectionsLabel.visible = false
 
 
 func _on_directions_button_pressed() -> void:
 	$Directions/DirectionsLabel.visible = not $Directions/DirectionsLabel.visible
+	$Credits/CreditsLabel.visible = false
