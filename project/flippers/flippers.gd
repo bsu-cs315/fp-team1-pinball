@@ -43,3 +43,11 @@ func _process(_delta: float) -> void:
 		_right_flipper_target_rotation = right_flipper_starting_rotation
 
 	right_flipper.rotation = lerp_angle(right_flipper.rotation, _right_flipper_target_rotation, flipper_speed)
+
+
+func _on_flipper_left_body_entered(_body: Node) -> void:
+	$flipper_sfx.play()
+
+
+func _on_flipper_right_body_entered(_body: Node) -> void:
+	$flipper_sfx.play()
