@@ -12,4 +12,5 @@ func _process(_delta: float) -> void:
 
 	
 func _on_ball_kill_zone_body_entered(body: Node2D) -> void:
-	body.queue_free()
+	if body.is_in_group("Ball"):
+		body.queue_free()

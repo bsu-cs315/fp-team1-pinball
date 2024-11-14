@@ -27,6 +27,7 @@ project/assembly_name="CS315 Final Project - Pinball"
 [global_group]
 
 Flippers=""
+Ball=""
 
 [input]
 
