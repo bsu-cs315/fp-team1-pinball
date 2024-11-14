@@ -136,21 +136,21 @@ position = Vector2(26.4407, -130.322)
 shape = SubResource("RectangleShape2D_w0sdh")
 
 [node name="BottomRightCorner" type="Sprite2D" parent="CornerPeices"]
-position = Vector2(530.78, 1034.72)
+position = Vector2(698, 1019)
 rotation = -0.436335
-scale = Vector2(0.252289, 0.566095)
+scale = Vector2(0.565369, 0.720525)
 texture = ExtResource("2_x4lp5")
 
 [node name="BottomRightCorner" type="StaticBody2D" parent="CornerPeices/BottomRightCorner"]
 physics_material_override = SubResource("PhysicsMaterial_2gfpg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerPeices/BottomRightCorner/BottomRightCorner"]
-position = Vector2(-2.62516, -105.249)
+position = Vector2(-2.62518, -105.249)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4mpm7")
 
 [node name="LauncherPlatform" type="Sprite2D" parent="CornerPeices"]
-position = Vector2(830, 1014.5)
+position = Vector2(815, 1001)
 scale = Vector2(0.516062, 0.646)
 texture = ExtResource("2_x4lp5")
 
