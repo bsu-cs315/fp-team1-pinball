@@ -154,6 +154,44 @@ position = Vector2(815, 1001)
 scale = Vector2(0.516062, 0.646)
 texture = ExtResource("2_x4lp5")
 
+[node name="Rails" type="Node" parent="."]
+
+[node name="RailRightFlipperB" parent="Rails" instance=ExtResource("5_a282h")]
+position = Vector2(487, 768)
+rotation = 0.523599
+
+[node name="RailRightFlipperT" parent="Rails" instance=ExtResource("5_a282h")]
+position = Vector2(508, 687)
+
+[node name="RailLeftFlipperT" parent="Rails" instance=ExtResource("5_a282h")]
+position = Vector2(79, 685)
+
+[node name="RailleftFlipperB" parent="Rails" instance=ExtResource("5_a282h")]
+position = Vector2(100, 766)
+rotation = -0.523599
+
+[node name="RailLeftBumper" parent="Rails" instance=ExtResource("5_a282h")]
+position = Vector2(40, 362)
+rotation = -0.523599
+
+[node name="RailLeftBumper2" parent="Rails" instance=ExtResource("5_a282h")]
+position = Vector2(543, 369)
+rotation = 0.523599
+
+[node name="Bumpers" type="Node" parent="."]
+
+[node name="Bumper" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+position = Vector2(62, 440)
+
+[node name="Bumper3" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+position = Vector2(171, 265)
+
+[node name="Bumper4" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+position = Vector2(417, 263)
+
+[node name="Bumper2" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+position = Vector2(521, 447)
+
 [node name="Launcher" parent="." instance=ExtResource("1_ijd6e")]
 position = Vector2(610, 808)
 
@@ -184,16 +222,5 @@ offset_right = 500.0
 offset_bottom = 528.0
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_slqxy")
-
-[node name="Bumper" parent="." instance=ExtResource("4_ti8qm")]
-position = Vector2(172, 174)
-
-[node name="Rail" parent="." instance=ExtResource("5_a282h")]
-position = Vector2(480, 706)
-rotation = 0.174533
-
-[node name="Rail2" parent="." instance=ExtResource("5_a282h")]
-position = Vector2(97, 697)
-rotation = -0.174533
 
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]

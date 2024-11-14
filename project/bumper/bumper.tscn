@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://h64d3ju5sgh6" path="res://bumper_hit.wav" id="4_g68yy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqq5l"]
-radius = 51.0
+radius = 38.0526
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_blcpj"]
 animations = [{
@@ -66,6 +66,7 @@ script = ExtResource("1_q4tvj")
 shape = SubResource("CircleShape2D_hqq5l")
 
 [node name="BumperSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_blcpj")
 
 [node name="BumperSFX" type="AudioStreamPlayer2D" parent="."]
