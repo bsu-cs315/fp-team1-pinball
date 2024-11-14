@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=26 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
@@ -7,6 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://uy7ohkn30ccv" path="res://flippers/flippers.tscn" id="3_po2wi"]
 [ext_resource type="PackedScene" uid="uid://bxpkvq2nwabpb" path="res://bumper/bumper.tscn" id="4_ti8qm"]
 [ext_resource type="PackedScene" uid="uid://bxb0r42els2w7" path="res://rails/rail.tscn" id="5_a282h"]
+[ext_resource type="AudioStream" uid="uid://bubx4fwa8aq0f" path="res://Pinball Chords.wav" id="8_ehyv5"]
+[ext_resource type="AudioStream" uid="uid://b1rstwudu77lj" path="res://Pinball Music Loop dos.wav" id="9_sktc1"]
+[ext_resource type="AudioStream" uid="uid://c5kcq2yc8g3y0" path="res://Pinball Music Loop Three.wav" id="10_gceut"]
+[ext_resource type="AudioStream" uid="uid://ua3nug8vpysn" path="res://Pinball Music Loop Full.wav" id="11_0qmgw"]
+[ext_resource type="AudioStream" uid="uid://dwakllj3jysse" path="res://Pinball Death.wav" id="12_wm34f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i55ga"]
 
@@ -230,4 +235,22 @@ offset_bottom = 208.0
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_slqxy")
 
+[node name="MusicLoopOne" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ehyv5")
+
+[node name="MusicLoopTwo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_sktc1")
+
+[node name="MusicLoopThree" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_gceut")
+
+[node name="MusicLoopFull" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_0qmgw")
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_wm34f")
+
 [connection signal="body_entered" from="BallKillZone" to="." method="_on_ball_kill_zone_body_entered"]
+[connection signal="finished" from="MusicLoopOne" to="." method="_on_music_loop_one_finished"]
+[connection signal="finished" from="MusicLoopTwo" to="." method="_on_music_loop_two_finished"]
+[connection signal="finished" from="MusicLoopThree" to="." method="_on_music_loop_three_finished"]
