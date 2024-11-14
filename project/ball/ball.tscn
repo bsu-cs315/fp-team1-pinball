@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://nf4nun7dhya"]
 
 [ext_resource type="Script" path="res://ball/ball.gd" id="1_1enj5"]
-[ext_resource type="Texture2D" uid="uid://dj7nph0oqn444" path="res://ball/ball.png" id="1_7iwom"]
+[ext_resource type="Texture2D" uid="uid://b6unhpfvx1dp0" path="res://ball/ball.png" id="1_7iwom"]
 [ext_resource type="AudioStream" uid="uid://x8x0usslftev" path="res://pinball_hit_1.wav" id="3_dsg7o"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sc1t8"]
