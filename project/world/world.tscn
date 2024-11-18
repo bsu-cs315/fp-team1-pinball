@@ -19,7 +19,7 @@
 size = Vector2(978, 258.381)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gx7aj"]
-size = Vector2(982, 258.163)
+size = Vector2(864, 258.163)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngn6p"]
 size = Vector2(2526.67, 50.0004)
@@ -88,7 +88,7 @@ position = Vector2(0, 0.0907172)
 physics_material_override = SubResource("PhysicsMaterial_i55ga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/OuterRightWall/OuterRight Wall"]
-position = Vector2(-2.99988, 119.082)
+position = Vector2(-61.9998, 119.082)
 shape = SubResource("RectangleShape2D_gx7aj")
 
 [node name="InnerRightWall" type="Sprite2D" parent="Walls"]
