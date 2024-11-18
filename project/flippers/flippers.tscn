@@ -13,10 +13,14 @@ flipper_speed = 0.7
 
 [node name="flipper_left" parent="." instance=ExtResource("1_mbad3")]
 position = Vector2(-175, 0)
+continuous_cd = 1
+max_contacts_reported = 5
 script = null
 
 [node name="flipper_right" parent="." instance=ExtResource("2_majwm")]
 position = Vector2(175, 0)
+continuous_cd = 1
+max_contacts_reported = 5
 script = null
 
 [node name="flipper_sfx" type="AudioStreamPlayer2D" parent="."]
