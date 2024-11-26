@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d30w4xvw1pirk"]
+
+[sub_resource type="GDScript" id="GDScript_oo0fd"]
+script/source = "extends VSlider
+
+
+func update_power(new_power: float) -> void:
+	value = new_power
+"
+
+[node name="VSlider" type="VSlider"]
+offset_right = 118.0
+offset_bottom = 129.0
+min_value = 1300.0
+max_value = 1700.0
+value = 1300.0
+editable = false
+scrollable = false
+script = SubResource("GDScript_oo0fd")

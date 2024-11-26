@@ -9,7 +9,7 @@
 script = ExtResource("1_duoia")
 left_flipper_node = NodePath("flipper_left")
 right_flipper_node = NodePath("flipper_right")
-flipper_speed = 0.7
+flipper_speed = 0.4
 
 [node name="flipper_left" parent="." instance=ExtResource("1_mbad3")]
 position = Vector2(-175, 0)

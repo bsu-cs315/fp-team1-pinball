@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bh7hvwo0kc42s"]
+[gd_scene load_steps=4 format=3 uid="uid://bh7hvwo0kc42s"]
 
 [ext_resource type="Texture2D" uid="uid://wqjmo2nranp0" path="res://launcher/launcher.png" id="1_sjm0u"]
 [ext_resource type="Script" path="res://launcher/launcher.gd" id="1_ymbva"]
+[ext_resource type="PackedScene" uid="uid://d30w4xvw1pirk" path="res://launcher/power_bar.tscn" id="3_xb7mh"]
 
 [node name="Launcher" type="Node2D"]
 script = ExtResource("1_ymbva")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sjm0u")
+
+[node name="VSlider" parent="." instance=ExtResource("3_xb7mh")]
+offset_left = -155.0
+offset_top = -270.0
+offset_right = -37.0
+offset_bottom = -141.0
+scale = Vector2(2.62379, 1.86899)
+script = null
