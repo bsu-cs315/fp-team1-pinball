@@ -1,5 +1,7 @@
 extends Node2D
 
+var _score : int = 0
+
 func _ready() -> void:
 	$MusicLoopOne.play()
 	
@@ -36,3 +38,22 @@ func _on_music_loop_three_finished() -> void:
 func _on_music_loop_two_finished() -> void:
 	$MusicLoopThree.play()
 	$MusicLoopTwo.stop()
+
+
+func _on_score_bumper_left_update_score() -> void:
+	_score += 10
+	_update_score_label()
+
+
+func _on_score_bumper_right_update_score() -> void:
+	_score += 10
+	_update_score_label()
+
+
+func _on_score_bumper_top_update_score() -> void:
+	_score += 10
+	_update_score_label()
+
+	
+func _update_score_label() -> void:
+	$ScoreLabel.text = "Score : %.d" % _score
