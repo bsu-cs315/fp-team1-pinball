@@ -5,7 +5,7 @@ extends Node2D
 
 var power := 1500.0
 @export var min_power := 1400.0
-@export var max_power := 1700.0
+@export var max_power := 1800.0
 var power_charge_rate := 500.0 
 var _current_ball: RigidBody2D = null
 var rng = RandomNumberGenerator.new()
