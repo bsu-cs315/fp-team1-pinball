@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsn1d2j0gaup7"]
+
+[ext_resource type="Texture2D" uid="uid://i77ilmnv8fkk" path="res://wall_bumpers/side_bumper.png" id="1_xrne8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vmsq5"]
+
+[node name="WallBumper" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_vmsq5")
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_xrne8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-11, -48, -6, -51, -1, -52, 6, -51, 12, -45, 55, 30, 55, 37, 53, 42, 49, 46, 46, 48, -46, 48, -51, 46, -55, 42, -56, 38, -57, 31)
