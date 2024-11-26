@@ -1,12 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsn1d2j0gaup7"]
+[gd_scene load_steps=2 format=3 uid="uid://dsn1d2j0gaup7"]
 
 [ext_resource type="Texture2D" uid="uid://i77ilmnv8fkk" path="res://wall_bumpers/side_bumper.png" id="1_xrne8"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vmsq5"]
-
 [node name="WallBumper" type="RigidBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_vmsq5")
 gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.35, 0.35)

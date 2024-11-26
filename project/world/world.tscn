@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=27 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://uy7ohkn30ccv" path="res://flippers/flippers.tscn" id="3_po2wi"]
 [ext_resource type="PackedScene" uid="uid://bxpkvq2nwabpb" path="res://bumper/bumper.tscn" id="4_ti8qm"]
 [ext_resource type="PackedScene" uid="uid://bxb0r42els2w7" path="res://rails/rail.tscn" id="5_a282h"]
+[ext_resource type="PackedScene" uid="uid://dsn1d2j0gaup7" path="res://wall_bumpers/wall_bumper.tscn" id="6_kcohy"]
 [ext_resource type="AudioStream" uid="uid://bubx4fwa8aq0f" path="res://Pinball Chords.wav" id="8_ehyv5"]
 [ext_resource type="AudioStream" uid="uid://b1rstwudu77lj" path="res://Pinball Music Loop dos.wav" id="9_sktc1"]
 [ext_resource type="AudioStream" uid="uid://c5kcq2yc8g3y0" path="res://Pinball Music Loop Three.wav" id="10_gceut"]
@@ -182,27 +183,24 @@ position = Vector2(79, 685)
 position = Vector2(100, 766)
 rotation = -0.523599
 
-[node name="RailLeftBumper" parent="Rails" instance=ExtResource("5_a282h")]
-position = Vector2(40, 362)
-rotation = -0.523599
-
-[node name="RailLeftBumper2" parent="Rails" instance=ExtResource("5_a282h")]
-position = Vector2(543, 369)
-rotation = 0.523599
-
 [node name="Bumpers" type="Node" parent="."]
 
-[node name="Bumper" parent="Bumpers" instance=ExtResource("4_ti8qm")]
-position = Vector2(62, 440)
-
-[node name="Bumper3" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+[node name="ScoreBumperLeft" parent="Bumpers" instance=ExtResource("4_ti8qm")]
 position = Vector2(171, 265)
 
-[node name="Bumper4" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+[node name="ScoreBumperRight" parent="Bumpers" instance=ExtResource("4_ti8qm")]
 position = Vector2(417, 263)
 
-[node name="Bumper2" parent="Bumpers" instance=ExtResource("4_ti8qm")]
-position = Vector2(521, 447)
+[node name="ScoreBumperTop" parent="Bumpers" instance=ExtResource("4_ti8qm")]
+position = Vector2(295, 55)
+
+[node name="WallBumperLeft" parent="Bumpers" instance=ExtResource("6_kcohy")]
+position = Vector2(68, 430)
+rotation = 1.5708
+
+[node name="WallBumperRight" parent="Bumpers" instance=ExtResource("6_kcohy")]
+position = Vector2(519, 430)
+rotation = 4.71239
 
 [node name="Launcher" parent="." instance=ExtResource("1_ijd6e")]
 position = Vector2(612, 804)
@@ -211,7 +209,7 @@ position = Vector2(612, 804)
 position = Vector2(271, 1013)
 scale = Vector2(9.56944, 2.12125)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BallKillZone"]
+[node name="BallKillZoneCollision" type="CollisionShape2D" parent="BallKillZone"]
 position = Vector2(19.3324, 0)
 shape = SubResource("RectangleShape2D_21ahr")
 
