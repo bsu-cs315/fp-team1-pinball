@@ -8,7 +8,6 @@ var power := 1500.0
 @export var max_power := 1800.0
 var power_charge_rate := 500.0 
 var _current_ball: RigidBody2D = null
-var rng = RandomNumberGenerator.new()
 
 var charging_power := false
 var current_charge_time := 0.0
