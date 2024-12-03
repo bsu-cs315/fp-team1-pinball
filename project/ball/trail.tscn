@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://pc8cm6tv1odk"]
+
+[ext_resource type="Script" path="res://ball/trail.gd" id="1_2b8k2"]
+
+[sub_resource type="Curve" id="Curve_wyvm8"]
+_data = [Vector2(0, 0), 0.0, -0.0183151, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Trail" type="Line2D"]
+show_behind_parent = true
+width_curve = SubResource("Curve_wyvm8")
+default_color = Color(0.544265, 0.300282, 0.86348, 1)
+script = ExtResource("1_2b8k2")
