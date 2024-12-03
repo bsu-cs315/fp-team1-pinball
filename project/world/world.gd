@@ -16,7 +16,7 @@ func _process(_delta: float) -> void:
 		
 	$BallsLeftLabel.text = "Balls Left : %.d" % $Launcher.balls_left
 	
-	
+	_current_score_counter()
 
 
 	
