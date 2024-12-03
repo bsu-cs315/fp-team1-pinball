@@ -1,6 +1,8 @@
 extends Node2D
 
 var _score : int = 0
+var _current_score: int = 0
+@export var balls_left := 3
 
 func _ready() -> void:
 	$MusicLoopOne.play()
@@ -13,6 +15,8 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file("res://Title screen/title_screen.tscn")
 		
 	$BallsLeftLabel.text = "Balls Left : %.d" % $Launcher.balls_left
+	
+	_current_score_counter()
 	
 	
 
@@ -42,18 +46,26 @@ func _on_music_loop_two_finished() -> void:
 
 func _on_score_bumper_left_update_score() -> void:
 	_score += 10
+	_current_score += 10
 	_update_score_label()
 
 
 func _on_score_bumper_right_update_score() -> void:
 	_score += 10
+	_current_score += 10
 	_update_score_label()
 
 
 func _on_score_bumper_top_update_score() -> void:
 	_score += 10
+	_current_score += 10
 	_update_score_label()
 
 	
 func _update_score_label() -> void:
 	$ScoreLabel.text = "Score : %.d" % _score
+
+func _current_score_counter() -> void:
+	if _current_score >= 300:
+		$Launcher.balls_left += 1
+		_current_score = 0

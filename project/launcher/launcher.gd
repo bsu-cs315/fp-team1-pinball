@@ -32,6 +32,7 @@ func _process(_delta: float) -> void:
 			min(current_charge_time * power_charge_rate / (max_power - min_power), 1.0)
 		)
 		vslider.value = power 
+		
 	elif Input.is_action_just_released("launch") and charging_power:
 		charging_power = false
 		launch_ball()
@@ -50,3 +51,4 @@ func launch_ball() -> void:
 		balls_left -= 1
 		_current_ball.global_position = global_position
 		_current_ball.apply_impulse(impulse)
+	
