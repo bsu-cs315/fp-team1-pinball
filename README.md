@@ -13,6 +13,8 @@ This is a game where the user flippers to hit a ball, in a pinball fashion.
 ### Licenses
 - Flipper art from [2D pinball sprites](https://opengameart.org/content/2d-pinball-sprites), licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 - Pool table art from [Creazilla](https://creazilla.com/media/clipart/27996/pool-table), licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- Bumper art from [WebKnobMan Gallery](https://www.g200kg.com/en/webknobman/gallery.php?m=p&p=914), licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- Pool Cue art from [OpenGameArt](https://opengameart.org/content/8-ball-pool-assets), licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ### Contributors
 - [Evan Kiser](https://github.com/evankiser01)
