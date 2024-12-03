@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://nf4nun7dhya"]
+[gd_scene load_steps=7 format=3 uid="uid://nf4nun7dhya"]
 
 [ext_resource type="Script" path="res://ball/ball.gd" id="1_1enj5"]
 [ext_resource type="Texture2D" uid="uid://b6unhpfvx1dp0" path="res://ball/ball.png" id="1_7iwom"]
 [ext_resource type="AudioStream" uid="uid://x8x0usslftev" path="res://pinball_hit_1.wav" id="3_dsg7o"]
+[ext_resource type="PackedScene" uid="uid://pc8cm6tv1odk" path="res://ball/trail.tscn" id="4_mldkk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sc1t8"]
 friction = 0.6
@@ -27,5 +28,7 @@ shape = SubResource("CircleShape2D_hck8x")
 
 [node name="Ball_sfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_dsg7o")
+
+[node name="Trail" parent="." instance=ExtResource("4_mldkk")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
