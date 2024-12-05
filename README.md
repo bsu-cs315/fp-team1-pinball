@@ -3,7 +3,9 @@
   
 ### Description
 This is a game where the user flippers to hit a ball, in a pinball fashion.
-- Your goal is to keep the ball up as long as possible
+- Your goal is to score as many points as possible
+  - Score points by hitting the target bumpers
+  - For every 300 points scored, you earn an extra ball
 
   #### Controls
   - Spacebar to launch the ball
@@ -32,4 +34,6 @@ This is a game where the user flippers to hit a ball, in a pinball fashion.
 - Core Loop: The game can be played from beginning to end. There is a way to start, gameplay that involves flinging an object in 3D space, and a clear end to gameplay, and the game can be restarted without needing to reopen the application.
 - Presentation: The project was presented in class on the given day
 - Personal Progress Report: The personal progress reports for this iteration were complete.
+- Juice: The game has appropriate music, sound effects, and graphics.
 - Clean: The project has neither errors nor warnings. The style guides have been followed. The project structure is appropriate. Conventional rules of code quality, such as Clean Code, are followed.
+
