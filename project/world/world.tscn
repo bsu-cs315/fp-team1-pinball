@@ -250,18 +250,11 @@ offset_bottom = 208.0
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_slqxy")
 
-[node name="MusicLoopFull" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_0qmgw")
-autoplay = true
-
-[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("12_wm34f")
-
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 29.0
 offset_top = 50.0
 offset_right = 148.0
-offset_bottom = 78.0
+offset_bottom = 84.0
 text = "Score:"
 label_settings = SubResource("LabelSettings_am0ye")
 
@@ -272,6 +265,13 @@ offset_right = 161.0
 offset_bottom = 118.0
 text = "High Score:"
 label_settings = SubResource("LabelSettings_srwlg")
+
+[node name="MusicLoopFull" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_0qmgw")
+autoplay = true
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_wm34f")
 
 [connection signal="updateScore" from="Bumpers/ScoreBumperLeft" to="." method="_on_score_bumper_left_update_score"]
 [connection signal="updateScore" from="Bumpers/ScoreBumperRight" to="." method="_on_score_bumper_right_update_score"]
