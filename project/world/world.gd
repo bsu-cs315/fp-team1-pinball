@@ -4,7 +4,7 @@ var _score : int = 0
 # Holds up to 300 score, after 300 gives another ball
 var _current_score: int = 0 
 var _high_score: int = 0
-const HIGH_SCORE_FILE: String = "user://high_score.save"
+const HIGH_SCORE_FILE: String = "res://high_score.save"
 
 
 func _process(_delta: float) -> void:

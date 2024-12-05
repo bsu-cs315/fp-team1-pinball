@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const HIGH_SCORE_FILE: String = "user://high_score.save"
+const HIGH_SCORE_FILE: String = "res://high_score.save"
 
 
 func _ready() -> void:
