@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://btko2penm71l4" path="res://Title screen/PoolTable.jpg" id="2_pw21b"]
 [ext_resource type="Texture2D" uid="uid://dpbf7tyjogu3c" path="res://Title screen/PinballLogo3.1.PNG" id="3_h4kt7"]
 [ext_resource type="Texture2D" uid="uid://b163h30l7xwk8" path="res://Title screen/WoodButton3.jpg" id="3_up11p"]
-[ext_resource type="AudioStream" uid="uid://bubx4fwa8aq0f" path="res://Pinball Chords.wav" id="5_8a3wg"]
+[ext_resource type="AudioStream" uid="uid://bubx4fwa8aq0f" path="res://Title screen/Pinball Chords.wav" id="5_8a3wg"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_sx2mq")

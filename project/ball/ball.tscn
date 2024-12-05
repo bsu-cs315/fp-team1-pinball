@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ball/ball.gd" id="1_1enj5"]
 [ext_resource type="Texture2D" uid="uid://b6unhpfvx1dp0" path="res://ball/ball.png" id="1_7iwom"]
-[ext_resource type="AudioStream" uid="uid://x8x0usslftev" path="res://pinball_hit_1.wav" id="3_dsg7o"]
+[ext_resource type="AudioStream" uid="uid://x8x0usslftev" path="res://ball/pinball_hit_1.wav" id="3_dsg7o"]
 [ext_resource type="PackedScene" uid="uid://pc8cm6tv1odk" path="res://ball/trail.tscn" id="4_mldkk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_sc1t8"]

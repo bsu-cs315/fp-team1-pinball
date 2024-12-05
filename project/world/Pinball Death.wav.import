@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dwakllj3jysse"
-path="res://.godot/imported/Pinball Death.wav-bf47c10d1633f8e9d1b6315f79148ce4.sample"
+path="res://.godot/imported/Pinball Death.wav-3fa91dfcad92a49c2715d90fe5f8f565.sample"
 
 [deps]
 
-source_file="res://Pinball Death.wav"
-dest_files=["res://.godot/imported/Pinball Death.wav-bf47c10d1633f8e9d1b6315f79148ce4.sample"]
+source_file="res://world/Pinball Death.wav"
+dest_files=["res://.godot/imported/Pinball Death.wav-3fa91dfcad92a49c2715d90fe5f8f565.sample"]
 
 [params]
 

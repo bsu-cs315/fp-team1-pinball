@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dly2syslgj4a5"
-path="res://.godot/imported/pinball_hit_2.wav-a2bc13082efa2cd2753b1e7b689af6a3.sample"
+path="res://.godot/imported/pinball_hit_2.wav-dafedadf1162594a7539118961e3cf3c.sample"
 
 [deps]
 
-source_file="res://pinball_hit_2.wav"
-dest_files=["res://.godot/imported/pinball_hit_2.wav-a2bc13082efa2cd2753b1e7b689af6a3.sample"]
+source_file="res://ball/pinball_hit_2.wav"
+dest_files=["res://.godot/imported/pinball_hit_2.wav-dafedadf1162594a7539118961e3cf3c.sample"]
 
 [params]
 

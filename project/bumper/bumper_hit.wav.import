@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://h64d3ju5sgh6"
-path="res://.godot/imported/bumper_hit.wav-6bce6d0390da744f9da4ed71220eb329.sample"
+path="res://.godot/imported/bumper_hit.wav-586b26ef8535342a165f8cb8adfc0744.sample"
 
 [deps]
 
-source_file="res://bumper_hit.wav"
-dest_files=["res://.godot/imported/bumper_hit.wav-6bce6d0390da744f9da4ed71220eb329.sample"]
+source_file="res://bumper/bumper_hit.wav"
+dest_files=["res://.godot/imported/bumper_hit.wav-586b26ef8535342a165f8cb8adfc0744.sample"]
 
 [params]
 

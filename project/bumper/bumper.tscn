@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cj0cl7g3ie5d5" path="res://bumper/bumper_on.png" id="1_a31ke"]
 [ext_resource type="Script" path="res://bumper/bumper.gd" id="1_q4tvj"]
 [ext_resource type="Texture2D" uid="uid://d4kcwp4tpis70" path="res://bumper/bumper_off.png" id="2_dy2lc"]
-[ext_resource type="AudioStream" uid="uid://h64d3ju5sgh6" path="res://bumper_hit.wav" id="4_g68yy"]
+[ext_resource type="AudioStream" uid="uid://h64d3ju5sgh6" path="res://bumper/bumper_hit.wav" id="4_g68yy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqq5l"]
 radius = 38.0526

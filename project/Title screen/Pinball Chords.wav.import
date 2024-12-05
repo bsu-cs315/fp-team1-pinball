@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bubx4fwa8aq0f"
-path="res://.godot/imported/Pinball Chords.wav-ea6315a07808850940378293fd26ef2d.sample"
+path="res://.godot/imported/Pinball Chords.wav-35308fa94beb4da3e2cc2d40de758777.sample"
 
 [deps]
 
-source_file="res://Pinball Chords.wav"
-dest_files=["res://.godot/imported/Pinball Chords.wav-ea6315a07808850940378293fd26ef2d.sample"]
+source_file="res://Title screen/Pinball Chords.wav"
+dest_files=["res://.godot/imported/Pinball Chords.wav-35308fa94beb4da3e2cc2d40de758777.sample"]
 
 [params]
 
