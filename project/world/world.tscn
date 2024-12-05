@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c8yur30t2p2yo"]
+[gd_scene load_steps=27 format=3 uid="uid://c8yur30t2p2yo"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_gtqkf"]
 [ext_resource type="PackedScene" uid="uid://bh7hvwo0kc42s" path="res://launcher/launcher.tscn" id="1_ijd6e"]
@@ -53,6 +53,10 @@ font_size = 64
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_am0ye"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_srwlg"]
 font_size = 24
 font_color = Color(0, 0, 0, 1)
 
@@ -260,6 +264,14 @@ offset_right = 148.0
 offset_bottom = 78.0
 text = "Score:"
 label_settings = SubResource("LabelSettings_am0ye")
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 84.0
+offset_right = 161.0
+offset_bottom = 118.0
+text = "High Score:"
+label_settings = SubResource("LabelSettings_srwlg")
 
 [connection signal="updateScore" from="Bumpers/ScoreBumperLeft" to="." method="_on_score_bumper_left_update_score"]
 [connection signal="updateScore" from="Bumpers/ScoreBumperRight" to="." method="_on_score_bumper_right_update_score"]
